@@ -39,31 +39,34 @@ nav a.active {
     border-radius: 8px;
 }
 
-/* PARCOURS */
-.container {
-    width: 60%;
-    margin: auto;
+/* Boutons rubriques */
+.buttons {
+    margin: 30px;
 }
 
-.skill {
-    margin: 20px;
-    text-align: left;
-}
-
-.bar {
-    background: rgba(255,255,255,0.1);
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
     border-radius: 10px;
-    overflow: hidden;
-}
-
-.level {
-    height: 20px;
+    cursor: pointer;
     background: #38bdf8;
+    color: black;
+    font-weight: bold;
 }
 
-/* texte */
-.label {
-    margin-bottom: 5px;
+/* Sections cachées */
+.section {
+    display: none;
+    margin-top: 20px;
+}
+
+.item {
+    background: rgba(255,255,255,0.1);
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    width: 60%;
 }
 </style>
 
@@ -71,22 +74,63 @@ nav a.active {
 
 <body>
 
-
- <nav>
-    <a href="./index.html">Accueil</a>
-    <a href="./competences.html">Compétences</a>
-    <a href="./parcours.html">Parcours</a>
-    <a href="./projects.html">Project</a>
-    <a href="./contact.html">contact</a>
+<nav>
+    ./index.html>
+    ./competences.htmlCompétences</a>
+    ./parcours.htmlParcours</a>
+    ./projects.htmlProjet</a>
+    ./contact.htmlContact</a>
 </nav>
 
 <h1>Mon parcours 🎓</h1>
 
-<div class="timeline">
+<div class="buttons">
+    <button onclick="showSection('bac')">Bac Pro</button>
+    <button onclick="showSection('bts')">BTS</button>
+</div>
 
-    <!-- Bac Pro -->
-    <div class="item left">
-        <div class="content">
-            <h2>Bac Professionnel SN</h2>
-            <p>Systèmes Numériques</p>
+<!-- BAC PRO -->
+<div id="bac" class="section">
+    <div class="item">
+        <h2>Année 1</h2>
+        <p>Découverte des systèmes numériques</p>
+    </div>
 
+    <div class="item">
+        <h2>Année 2</h2>
+        <p>Réseaux, maintenance informatique</p>
+    </div>
+
+    <div class="item">
+        <h2>Année 3</h2>
+        <p>Projet final + stage</p>
+    </div>
+</div>
+
+<!-- BTS -->
+<div id="bts" class="section">
+    <div class="item">
+        <h2>1ère année</h2>
+        <p>Programmation, bases réseau</p>
+    </div>
+
+    <div class="item">
+        <h2>2ème année</h2>
+        <p>Projet professionnel + stage</p>
+    </div>
+</div>
+
+<script>
+function showSection(id) {
+    // cache tout
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // affiche la bonne section
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
