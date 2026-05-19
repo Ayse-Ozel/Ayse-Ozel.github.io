@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Projets </title>
+<title>Mes projets</title>
 
 <style>
 body {
@@ -32,38 +32,45 @@ nav a {
     font-weight: bold;
 }
 
-nav a.active {
-    background: #38bdf8;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 8px;
+/* BOUTONS */
+.buttons {
+    margin: 30px;
 }
 
-/* PROJETS */
-.container {
+button {
+    padding: 14px 35px;
+    margin: 10px;
+    border-radius: 12px;
+    border: 2px solid rgba(56, 189, 248, 0.8);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    color: #38bdf8;
+    font-weight: bold;
+    font-size: 16px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #38bdf8;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+.section {
+    display: none;
     width: 60%;
     margin: auto;
 }
 
-.skill {
-    margin: 20px;
-    text-align: left;
-}
-
-.bar {
+/* ITEM */
+.item {
     background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.level {
-    height: 20px;
-    background: #38bdf8;
-}
-
-/* texte */
-.label {
-    margin-bottom: 5px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
 }
 </style>
 
@@ -72,12 +79,57 @@ nav a.active {
 <body>
 
 <nav>
-    <a href="./index.html">Accueil</a>
-    <a href="./competences.html">Compétences</a>
-    <a href="./parcours.html">Parcours</a>
-    <a href="./projets.html">Projets</a>
-    <a href="./contact.html">contact</a>
+   
 </nav>
 
-<h1>Mes projets 💻</h1>
+<h1>Mes projets 💼</h1>
 
+<div class="buttons">
+    <button onclick="showSection('dev')">Développement</button>
+    <button onclick="showSection('reseau')">Réseau</button>
+</div>
+
+<!-- DEV -->
+<div id="dev" class="section">
+    <div class="item">
+        <h2>🛍️ Site web de vente de bijoux</h2>
+        <p>
+            Réalisation d’un site web de e-commerce dédié à la vente de bijoux.
+        </p>
+        <ul>
+            <li>Création du design et de l’interface utilisateur</li>
+            <li>Développement en HTML / CSS</li>
+            <li>Organisation des pages (accueil, produits, contact)</li>
+            <li>Travail sur l’expérience utilisateur</li>
+        </ul>
+    </div>
+</div>
+
+<!-- RESEAU -->
+<div id="reseau" class="section">
+    <div class="item">
+        <h2>🔐 Sensibilisation à la cybersécurité (SSI)</h2>
+        <p>
+            Projet de sensibilisation à la sécurité des systèmes d’information.
+        </p>
+        <ul>
+            <li>Présentation des bonnes pratiques de sécurité</li>
+            <li>Prévention contre les attaques (phishing, mots de passe faibles)</li>
+            <li>Sensibilisation des utilisateurs</li>
+            <li>Compréhension des risques liés aux systèmes informatiques</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
