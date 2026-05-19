@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mon parcours</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+/* TITRE */
+h1 {
+    text-align: center;
+    padding: 40px;
+}
+
+/* TIMELINE */
+.timeline {
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+/* Ligne verticale */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #38bdf8;
+    transform: translateX(-50%);
+}
+
+/* Bloc */
+.item {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+}
+
+/* gauche/droite */
+.left {
+    left: 0;
+    text-align: right;
+}
+
+.right {
+    left: 50%;
+}
+
+/* contenu */
+.content {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(56,189,248,0.2);
+    transition: 0.3s;
+}
+
+.content:hover {
+    transform: scale(1.05);
+}
+
+/* points */
+.item::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    width: 15px;
+    height: 15px;
+    background: #38bdf8;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left::before {
+    right: -8px;
+}
+
+.right::before {
+    left: -8px;
+}
+
+/* bouton retour */
+.back {
+    text-align: center;
+    margin: 40px;
+}
+
+.back a {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back a:hover {
+    background: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Mon parcours 🎓</h1>
+
+<div class="timeline">
+
+    <!-- Bac Pro -->
+    <div class="item left">
+        <div class="content">
+            <h2>Bac Professionnel SN</h2>
+            <p>Systèmes Numériques</p>
+
