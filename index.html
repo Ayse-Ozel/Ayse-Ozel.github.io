@@ -1,96 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<title>Portfolio BTS SIO - Accueil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ayse Ozel</title>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a);
-    color: white;
-    padding-top: 80px;
-    text-align: center;
-}
+    <link rel="stylesheet" href="css/style.css">
 
-/* NAVBAR */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-}
-
-/* LIENS */
-nav a {
-    color: #38bdf8;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: white;
-}
-
-nav a.active {
-    background: #38bdf8;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 8px;
-}
-
-/* CARTE */
-.card {
-    background: rgba(255,255,255,0.05);
-    width: 60%;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 15px;
-}
-
-/* BOUTON */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px;
-    background: #38bdf8;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-}
-</style>
-
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-<nav>
-    <a href="./index.html">Accueil</a>
-    <a href="./competences.html">Compétences</a>
-    <a href="./parcours.html">Parcours</a>
-    <a href="./projets.html">Projets</a>
-    <a href="./veille techno">veille techno</a> 
-    <a href="./contact.html">contact</a>
-   
-</nav>
+    <!-- Navigation -->
 
-<h1>Bienvenue sur mon portfolio</h1>
-<p>Étudiante en BTS SIO option SISR 💻</p>
+    <header>
 
-<div class="card">
-    <h2>À propos de moi</h2>
-    <p>
-        Bonjour, je m'appelle Ayse OZEL. Je suis étudiante en BTS SIO option SISR,
-        passionnée par les réseaux et les systèmes.
-    </p>
-        Mon parcours</a>
-</div>
+        <nav>
+
+            <h2 class="logo">Ayse<span>.</span></h2>
+
+            <ul>
+
+                <li><a href="index.html">Accueil</a></li>
+
+                <li><a href="parcours.html">Parcours</a></li>
+
+                <li><a href="situation.html">Situation professionnelle</a></li>
+
+                <li><a href="veille.html">Veille</a></li>
+
+                <li><a href="competences.html">Compétences</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Accueil -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h3>Bonjour, je suis</h3>
+
+            <h1>Ayse Ozel</h1>
+
+            <h2>BTS SIO - Option SISR</h2>
+
+            <p>
+
+                Étudiante au lycée Jacques Brel, passionnée par les réseaux,
+                l'administration système et la cybersécurité.
+
+                Ce portfolio présente mon parcours, mes compétences ainsi que
+                mes expériences professionnelles.
+
+            </p>
+
+            <div class="buttons">
+
+                <a href="parcours.html" class="btn">Mon parcours</a>
+
+                <a href="situation.html" class="btn2">Mes projets</a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="images/profil.png" alt="Photo de profil">
+
+        </div>
+
+    </section>
+
+    <!-- Cartes -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h3>Parcours</h3>
+
+            <p>Découvrez mon parcours scolaire ainsi que ma formation.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-network-wired"></i>
+
+            <h3>SISR</h3>
+
+            <p>Administration système, réseaux et cybersécurité.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Cybersécurité</h3>
+
+            <p>Sensibilisation, Active Directory et gestion des droits.</p>
+
+        </div>
+
+    </section>
+
+    <!-- À propos -->
+
+    <section class="about">
+
+        <h2>À propos de moi</h2>
+
+        <p>
+
+            Actuellement en BTS SIO option SISR, je développe mes compétences
+            dans l'administration des systèmes et réseaux.
+
+            Mon objectif est de devenir une professionnelle capable de
+            sécuriser les infrastructures informatiques tout en accompagnant les
+            utilisateurs.
+
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 - Portfolio d'Ayse Ozel</p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
-</html>
+
+</html>    
